@@ -1,0 +1,431 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+
+.sezione-principale{
+    height: 90vh;
+    background: url('../img-vid/palazzo-ducale.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    color: white;
+
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: white;
+}
+
+.menu-logo-contenitore {
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-logo-contenitore img {
+    height: 40px;
+}
+
+.menu-link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.menu-link a {
+    border: 2px solid;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-link a:hover {
+    color: #b2dfdb;
+}
+
+
+.principale-testo-contenitore {
+    position: absolute;
+    bottom: 300px;
+    left: 60px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.principale-titolo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.principale-testo ,.testo-sfumato {
+    color: transparent;
+    -webkit-text-stroke: 1.5px transparent;
+    background: linear-gradient(30deg, #ffffff, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: transparent;
+    filter: drop-shadow(0 0 4px #555) drop-shadow(0 0 6px #000);
+}
+
+
+
+.principale-buttone {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-principale {
+    background-color: rgba(23, 94, 40, 0.63);
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+
+
+.sezione-secondaria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 60px;
+    background-color: white;
+    color: #1a1a1a;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.sezione-descrizione {
+    flex: 1 1 50%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #f5faff;
+    border-left: 5px solid #0d47a1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.sezione-descrizione:hover {
+    background-color: #e3f2fd;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sezione-descrizione h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0d47a1;
+    position: relative;
+    padding-left: 15px;
+
+
+}
+
+
+.sezione-descrizione p {
+    font-size: 1.15em;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sezione-valori {
+    height: 280px;
+    transition: all 0.4s ease;
+}
+
+
+.sezione-valori:hover {
+    background-color: #e3f2fd;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.sezione-attività {
+    transition: all 0.4s ease;
+}
+
+.sezione-attività:hover {
+    background-color: #e3f2fd;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.sezione-valori,
+.sezione-attività {
+    background-color: #f0f8ff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1.5s ease-in-out;
+    border-left: 5px solid #0d47a1;
+}
+
+.sezione-valori h3,
+.sezione-attività h3 {
+    color: #0d47a1;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.sezione-valori ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sezione-valori li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    padding-left: 1em;
+    position: relative;
+}
+
+.sezione-valori li::before {
+    content: "•";
+    color: #0d47a1;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        /* Keep logos left, menu right by allowing space between them */
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: space-between; /* Push items to ends */
+        align-items: center; /* Vertically align items */
+        padding: 15px 20px;
+    }
+
+    .menu-logo-contenitore {
+        margin-bottom: 0; /* Remove previous margin */
+        gap: 10px; /* Add a small gap between logos if needed */
+    }
+
+    .menu-logo-contenitore img {
+        height: 35px;
+    }
+
+    .menu-link {
+        flex-direction: row; /* Keep menu items in a row */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .menu-link a {
+        padding: 5px 10px; /* Slightly reduce padding for smaller screens */
+        font-size: 13px; /* Smaller font size for menu links */
+    }
+
+    .principale-testo-contenitore {
+        bottom: 50px;
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        text-align: center;
+    }
+
+    .principale-titolo {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .principale-buttone {
+        justify-content: center;
+    }
+
+    .btn-principale {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    .sezione-secondaria {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .sezione-descrizione {
+        max-width: none;
+        padding: 20px;
+    }
+
+    .sezione-descrizione h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .sezione-descrizione p {
+        font-size: 1em;
+    }
+
+    .sezione-valori,
+    .sezione-attività {
+        padding: 20px;
+        margin-top: 15px;
+        /* Ensure they take full width on small screens if needed */
+        flex: 1 1 100%;
+    }
+
+    .sezione-valori h3,
+    .sezione-attività h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .sezione-valori li,
+    .sezione-attività p {
+        font-size: 0.95em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .navbar {
+        padding: 15px 30px;
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-between; /* Push items to ends */
+    }
+
+    .menu-logo-contenitore img {
+        height: 38px;
+    }
+
+    .menu-link {
+        flex-direction: row; /* Keep menu items in a row */
+        gap: 15px;
+    }
+
+    .principale-testo-contenitore {
+        bottom: 150px;
+        left: 30px;
+        max-width: 500px;
+    }
+
+    .principale-titolo {
+        font-size: 2.5em;
+    }
+
+    .sezione-secondaria {
+        padding: 60px 30px;
+        gap: 30px;
+    }
+
+    .sezione-descrizione {
+        max-width: 100%; /* Allow description to take full width if needed */
+        padding: 25px;
+    }
+
+    .sezione-descrizione h2 {
+        font-size: 1.7em;
+    }
+
+    .sezione-descrizione p {
+        font-size: 1.1em;
+    }
+
+    .sezione-valori,
+    .sezione-attività {
+        padding: 22px 25px;
+        /* Adjust flex basis to arrange them as needed */
+        flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    }
+
+    .sezione-valori h3,
+    .sezione-attività h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* Medium devices (landscape tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .navbar {
+        padding: 20px 40px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .principale-testo-contenitore {
+        bottom: 200px;
+        left: 40px;
+        max-width: 550px;
+    }
+
+    .principale-titolo {
+        font-size: 2.8em;
+    }
+
+    .sezione-secondaria {
+        padding: 70px 40px;
+        gap: 35px;
+    }
+
+    .sezione-descrizione {
+        max-width: 100%;
+    }
+
+    .sezione-valori,
+    .sezione-attività {
+        flex: 1 1 calc(50% - 17.5px); /* Two columns with gap */
+    }
+}
+
+/* Large devices (laptops/desktops, 993px and up) - Current styles are largely for this range */
+@media only screen and (min-width: 993px) {
+    /* No major changes needed here, as the base CSS is already optimized for larger screens */
+}
